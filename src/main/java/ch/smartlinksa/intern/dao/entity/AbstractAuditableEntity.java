@@ -1,5 +1,7 @@
 package ch.smartlinksa.intern.dao.entity;
 
+import org.hibernate.annotations.Type;
+import org.joda.time.DateTime;
 import org.springframework.data.annotation.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -14,21 +16,24 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 public abstract class AbstractAuditableEntity implements Serializable{
 
+    private static final long serialVersionUID = 3938440942254776489L;
     @CreatedBy
     @Column(name="created_by")
     private String createdBy;
 
     @CreatedDate
+    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     @Column(name="created_date")
-    private Date createdDate;
+    private DateTime createdDate;
 
     @LastModifiedBy
     @Column(name="last_modified_by")
     private String lastModifiedBy;
 
     @LastModifiedDate
+    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     @Column(name="last_modified_date")
-    private Date lastModifiedDate;
+    private DateTime lastModifiedDate;
 
     @Version
     @Column(name="version_no")
@@ -44,11 +49,11 @@ public abstract class AbstractAuditableEntity implements Serializable{
         this.createdBy = createdBy;
     }
 
-    public Date getCreatedDate() {
+    public DateTime getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(Date createdDate) {
+    public void setCreatedDate(DateTime createdDate) {
         this.createdDate = createdDate;
     }
 
@@ -60,11 +65,11 @@ public abstract class AbstractAuditableEntity implements Serializable{
         this.lastModifiedBy = lastModifiedBy;
     }
 
-    public Date getLastModifiedDate() {
+    public DateTime getLastModifiedDate() {
         return lastModifiedDate;
     }
 
-    public void setLastModifiedDate(Date lastModifiedDate) {
+    public void setLastModifiedDate(DateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
     }
 

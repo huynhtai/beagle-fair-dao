@@ -10,8 +10,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name="user")
-public class User extends AbstractAuditableEntity implements Serializable{
-	private static final long serialVersionUID = 1L;
+public class User extends AbstractAuditableEntity {
 
 	@Id
 	private String id = UUID.randomUUID().toString();
