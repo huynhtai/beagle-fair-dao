@@ -7,7 +7,7 @@ import java.io.Serializable;
 @Table(name="transaction")
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name="type_of_transaction", discriminatorType=DiscriminatorType.INTEGER)
-public class Transaction extends AbstractAuditableEntity implements Serializable {
+public class Transaction extends AbstractAuditableEntity {
     private static final long serialVersionUID = 1L;
 
     @Id
