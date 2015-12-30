@@ -8,18 +8,7 @@ import javax.persistence.*;
 public class SellTransaction extends Transaction{
     private static final long serialVersionUID = 1L;
 
-    @Id
-    private String id;
-
     private String description;
-
-    public String getId() {
-        return this.id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getDescription() {
         return this.description;

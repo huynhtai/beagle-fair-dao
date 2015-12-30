@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"
+                   logicalFilePath="db.changelog-1.6.xml">
+    <changeSet author="tai (generated)" id="1451465008054-1">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="transaction" constraintName="fk_transaction_user" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user"/>
+    </changeSet>
+    <changeSet author="tai (generated)" id="1451465008054-2">
+        <dropForeignKeyConstraint baseTableName="transaction" constraintName="fk_transaction_type"/>
+    </changeSet>
+    <changeSet author="tai (generated)" id="1451465008054-3">
+        <dropTable tableName="transaction_type"/>
+    </changeSet>
+</databaseChangeLog>

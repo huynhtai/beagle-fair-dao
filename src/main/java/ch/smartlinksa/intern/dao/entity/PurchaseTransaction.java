@@ -11,8 +11,6 @@ public class PurchaseTransaction extends Transaction {
 
 	private String address;
 
-	private String id;
-
 	@Column(name="total_price")
 	private double totalPrice;
 
@@ -25,14 +23,6 @@ public class PurchaseTransaction extends Transaction {
 
 	public void setAddress(String address) {
 		this.address = address;
-	}
-
-	public String getId() {
-		return this.id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
 	}
 
 	public double getTotalPrice() {
