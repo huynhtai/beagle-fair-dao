@@ -1,12 +1,11 @@
 package ch.smartlinksa.intern.dao.entity;
 
-import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
 @Table(name="purchase")
 @DiscriminatorValue("2")
-public class Purchase extends Transaction implements Serializable {
+public class PurchaseTransaction extends Transaction {
 
 	private static final long serialVersionUID = 1L;
 
@@ -17,7 +16,7 @@ public class Purchase extends Transaction implements Serializable {
 	@Column(name="total_price")
 	private double totalPrice;
 
-	public Purchase() {
+	public PurchaseTransaction() {
 	}
 
 	public String getAddress() {
