@@ -2,6 +2,8 @@ package ch.smartlinksa.intern.dao.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.rmi.server.UID;
+import java.util.UUID;
 
 @Entity
 @Table(name="transaction")
@@ -11,7 +13,7 @@ public class Transaction extends AbstractAuditableEntity {
     private static final long serialVersionUID = 1L;
 
     @Id
-    private String id;
+    private String id = UUID.randomUUID().toString();
 
     @Column(name="product_code")
     private String productCode;
