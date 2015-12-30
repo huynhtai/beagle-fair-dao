@@ -2,7 +2,6 @@ package ch.smartlinksa.intern.dao.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.rmi.server.UID;
 import java.util.UUID;
 
 @Entity
