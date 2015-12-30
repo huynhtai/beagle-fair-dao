@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="purchase")
 @DiscriminatorValue("2")
-public class Purchase implements Serializable {
+public class Purchase extends Transaction implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
