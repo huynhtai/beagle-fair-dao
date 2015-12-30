@@ -7,10 +7,8 @@ import java.io.Serializable;
 @Table(name="refund")
 @DiscriminatorValue("3")
 public class Refund extends Transaction {
-    private static final long serialVersionUID = 1L;
 
-    @Id
-    private String id;
+    private static final long serialVersionUID = 1L;
 
     private String address;
 
@@ -22,13 +20,7 @@ public class Refund extends Transaction {
     public Refund() {
     }
 
-    public String getId() {
-        return this.id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getAddress() {
         return this.address;
