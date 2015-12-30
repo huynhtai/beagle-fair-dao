@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"
+                   logicalFilePath="db.changelog-1.2.xml">
+<changeSet author="lienhtm (generated)" id="1451445447698-1">
+    <addColumn tableName="transaction">
+        <column name="created_by" type="VARCHAR(36)"/>
+    </addColumn>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-2">
+<addColumn tableName="transaction">
+    <column name="created_date" type="TIMESTAMP(19)"/>
+</addColumn>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-3">
+<addColumn tableName="transaction">
+    <column name="modified_by" type="VARCHAR(36)"/>
+</addColumn>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-4">
+<addColumn tableName="transaction">
+    <column name="modified_date" type="TIMESTAMP(19)"/>
+</addColumn>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-5">
+<addColumn tableName="transaction">
+    <column name="product_code" type="VARCHAR(12)"/>
+</addColumn>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-6">
+<addColumn tableName="transaction">
+    <column name="result_code" type="VARCHAR(12)"/>
+</addColumn>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-7">
+<addColumn tableName="transaction">
+    <column name="result_message" type="VARCHAR(200)"/>
+</addColumn>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-8">
+<addColumn tableName="transaction">
+    <column name="transaction_id" type="VARCHAR(36)">
+        <constraints nullable="false"/>
+    </column>
+</addColumn>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-9">
+<addColumn tableName="transaction">
+    <column name="type_of_transaction" type="INT(10)"/>
+</addColumn>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-10">
+<addColumn tableName="transaction">
+    <column name="unit_price" type="DOUBLE(22)"/>
+</addColumn>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-11">
+<addColumn tableName="transaction">
+    <column name="user_id" type="VARCHAR(36)"/>
+</addColumn>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-12">
+<createIndex indexName="PRIMARY" tableName="transaction" unique="true">
+    <column name="transaction_id"/>
+</createIndex>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-13">
+<dropColumn columnName="created-by" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-14">
+<dropColumn columnName="created-date" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-15">
+<dropColumn columnName="modified-by" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-16">
+<dropColumn columnName="modified-date" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-17">
+<dropColumn columnName="product-code" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-18">
+<dropColumn columnName="result-code" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-19">
+<dropColumn columnName="result-message" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-20">
+<dropColumn columnName="transaction-id" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-21">
+<dropColumn columnName="type-of-transaction" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-22">
+<dropColumn columnName="unit-price" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-23">
+<dropColumn columnName="user-id" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-24">
+<dropIndex indexName="PRIMARY" tableName="transaction"/>
+</changeSet>
+<changeSet author="lienhtm (generated)" id="1451445447698-25">
+<dropPrimaryKey tableName="transaction"/>
+<addPrimaryKey columnNames="transaction_id" constraintName="PRIMARY" tableName="transaction"/>
+</changeSet>
+        </databaseChangeLog>
