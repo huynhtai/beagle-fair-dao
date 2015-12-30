@@ -1,12 +1,12 @@
 package ch.smartlinksa.intern.dao.entity;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name="refund")
 @DiscriminatorValue("3")
-public class Refund extends Transaction {
+
+public class RefundTransaction extends Transaction {
 
     private static final long serialVersionUID = 1L;
 
@@ -17,7 +17,7 @@ public class Refund extends Transaction {
     @Column(name="total_price")
     private double totalPrice;
 
-    public Refund() {
+    public RefundTransaction() {
     }
 
 
