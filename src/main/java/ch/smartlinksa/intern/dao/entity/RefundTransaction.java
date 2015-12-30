@@ -9,9 +9,6 @@ import java.io.Serializable;
 public class RefundTransaction extends Transaction {
     private static final long serialVersionUID = 1L;
 
-    @Id
-    private String id;
-
     private String address;
 
     private String reason;
@@ -20,14 +17,6 @@ public class RefundTransaction extends Transaction {
     private double totalPrice;
 
     public RefundTransaction() {
-    }
-
-    public String getId() {
-        return this.id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getAddress() {
