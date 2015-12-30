@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"
+                   logicalFilePath="db.changelog-1.8.xml">
+    <changeSet author="tai (generated)" id="1451465008056-1">
+        <renameColumn
+                      columnDataType="varchar(36)"
+                      newColumnName="last_modified_by"
+                      oldColumnName="modified_by"
+                      tableName="transaction"/>
+    </changeSet>
+    <changeSet author="tai (generated)" id="1451465008056-2">
+        <renameColumn
+                columnDataType="timestamp"
+                newColumnName="last_modified_date"
+                oldColumnName="modified_date"
+                tableName="transaction"/>
+    </changeSet>
+</databaseChangeLog>
