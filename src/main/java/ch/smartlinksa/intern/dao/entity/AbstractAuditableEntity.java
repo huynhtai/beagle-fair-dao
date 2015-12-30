@@ -35,9 +35,9 @@ public abstract class AbstractAuditableEntity implements Serializable{
     @Column(name="last_modified_date")
     private DateTime lastModifiedDate;
 
-    @Version
     @Column(name="version_no")
-    private String versionNo;
+    @Version
+    private int versionNo;
 
     private boolean deleted;
 
@@ -73,11 +73,11 @@ public abstract class AbstractAuditableEntity implements Serializable{
         this.lastModifiedDate = lastModifiedDate;
     }
 
-    public String getVersionNo() {
+    public int getVersionNo() {
         return versionNo;
     }
 
-    public void setVersionNo(String versionNo) {
+    public void setVersionNo(int versionNo) {
         this.versionNo = versionNo;
     }
 
