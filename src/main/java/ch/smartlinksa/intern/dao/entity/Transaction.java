@@ -11,8 +11,7 @@ public class Transaction extends AbstractAuditableEntity implements Serializable
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(name="transaction_id")
-    private String transactionId;
+    private String id;
 
     @Column(name="product_code")
     private String productCode;
@@ -31,15 +30,12 @@ public class Transaction extends AbstractAuditableEntity implements Serializable
     @Column(name="user_id")
     private String userId;
 
-    public Transaction() {
+    public String getId() {
+        return id;
     }
 
-    public String getTransactionId() {
-        return transactionId;
-    }
-
-    public void setTransactionId(String transactionId) {
-        this.transactionId = transactionId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getProductCode() {
