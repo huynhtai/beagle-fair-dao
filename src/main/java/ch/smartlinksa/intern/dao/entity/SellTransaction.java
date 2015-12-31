@@ -1,10 +1,12 @@
 package ch.smartlinksa.intern.dao.entity;
 
+import ch.smartlinksa.intern.dao.constant.TypeOfTransaction;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="sell_transaction")
-@DiscriminatorValue("1")
+@DiscriminatorValue("0")
 public class SellTransaction extends Transaction{
     private static final long serialVersionUID = 1L;
 

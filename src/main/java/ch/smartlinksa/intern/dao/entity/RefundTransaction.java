@@ -3,7 +3,7 @@ package ch.smartlinksa.intern.dao.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="refund")
+@Table(name="refund_transaction")
 @DiscriminatorValue("0")
 
 public class RefundTransaction extends Transaction {
