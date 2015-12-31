@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="refund")
-@DiscriminatorValue("3")
+@DiscriminatorValue("0")
 
 public class RefundTransaction extends Transaction {
 
