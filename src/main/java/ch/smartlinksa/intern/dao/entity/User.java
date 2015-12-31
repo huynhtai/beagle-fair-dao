@@ -4,6 +4,7 @@ import ch.smartlinksa.intern.dao.constant.Gender;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 
@@ -37,6 +38,10 @@ public class User extends AbstractAuditableEntity {
 	private String address;
 
 	private double balance;
+
+	//bi-directional many-to-one association to Transaction
+	@OneToMany(mappedBy="user")
+	private List<Transaction> transactions;
 
 	public String getId() {
 		return id;
@@ -116,5 +121,13 @@ public class User extends AbstractAuditableEntity {
 
 	public void setBalance(double balance) {
 		this.balance = balance;
+	}
+
+	public List<Transaction> getTransactions() {
+		return this.transactions;
+	}
+
+	public void setTransactions(List<Transaction> transactions) {
+		this.transactions = transactions;
 	}
 }

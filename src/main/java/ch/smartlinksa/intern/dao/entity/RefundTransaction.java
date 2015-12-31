@@ -1,11 +1,13 @@
 package ch.smartlinksa.intern.dao.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="refund")
-@DiscriminatorValue("3")
-
+@DiscriminatorValue("2")
 public class RefundTransaction extends Transaction {
 
     private static final long serialVersionUID = 1L;
@@ -19,8 +21,6 @@ public class RefundTransaction extends Transaction {
 
     public RefundTransaction() {
     }
-
-
 
     public String getAddress() {
         return this.address;

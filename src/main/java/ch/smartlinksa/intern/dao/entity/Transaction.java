@@ -1,7 +1,8 @@
 package ch.smartlinksa.intern.dao.entity;
 
+import ch.smartlinksa.intern.dao.constant.TypeOfTransaction;
+
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
@@ -28,8 +29,12 @@ public class Transaction extends AbstractAuditableEntity {
     @Column(name="unit_price")
     private double unitPrice;
 
-    @Column(name="user_id")
-    private String userId;
+    @Column(name="type_of_transaction", insertable = false, updatable = false)
+    private TypeOfTransaction typeOfTransaction;
+
+    //bi-directional many-to-one association to User
+    @ManyToOne
+    private User user;
 
     public String getId() {
         return id;
@@ -79,11 +84,19 @@ public class Transaction extends AbstractAuditableEntity {
         this.unitPrice = unitPrice;
     }
 
-    public String getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public TypeOfTransaction getTypeOfTransaction() {
+        return typeOfTransaction;
+    }
+
+    public void setTypeOfTransaction(TypeOfTransaction typeOfTransaction) {
+        this.typeOfTransaction = typeOfTransaction;
     }
 }

@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="sell_transaction")
-@DiscriminatorValue(TypeOfTransaction.SELL)
+@DiscriminatorValue("0")
 public class SellTransaction extends Transaction{
     private static final long serialVersionUID = 1L;
 

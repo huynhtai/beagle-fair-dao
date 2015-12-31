@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="purchase_transaction")
-@DiscriminatorValue("2")
+@DiscriminatorValue("1")
 public class PurchaseTransaction extends Transaction {
 
 	private static final long serialVersionUID = 1L;

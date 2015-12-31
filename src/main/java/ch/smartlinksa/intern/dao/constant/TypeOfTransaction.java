@@ -1,7 +1,7 @@
 package ch.smartlinksa.intern.dao.constant;
 
-public class TypeOfTransaction {
-    private TypeOfTransaction(){}
+public enum  TypeOfTransaction {
 
-    public static final String SELL = "1";
+    SELL, PURCHASE, REFUND;
+
 }
